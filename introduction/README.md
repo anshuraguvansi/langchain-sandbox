@@ -1,6 +1,16 @@
 ## Introduction
 
-Content to be added.
+This module provides a foundation for understanding LangChain and how it helps
+developers build applications around large language models.
+
+We will begin with the basic concepts, learn why frameworks such as LangChain
+are useful, explore its main components, and see how those components fit
+together in a high-level application architecture.
+
+Each concept is supported by a small playground example. The goal is to first
+understand the role of each building block, then connect the ideas into simple
+workflows before moving on to advanced topics such as retrieval, tools, and
+agents.
 
 ## What Is LangChain?
 LangChain is an open-source framework designed to simplify building applications powered by large language models (LLMs).
