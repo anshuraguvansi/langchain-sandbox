@@ -79,12 +79,19 @@ application
 LangChain workflow
   |
   +--> prompt template
-  +--> model call ------------------> OpenAI or another model provider
+  |       ^
+  |       |
+  |   retriever <-------- vector store or other data source
+  |       ^
+  |       |
+  |   user question
+  |
+  +--> model call ------------------> a model provider
+  |       ^
+  |       |
+  |   tool results <-------- tools, APIs, databases, or services
+  |
   +--> output parser
-  |
-  +--> retriever --> vector store or other data source
-  |
-  +--> tools ------> APIs, databases, or application services
   |
   v
 application response
@@ -102,10 +109,18 @@ the model is called:
 ```text
 user question
 -> retriever
+-> vector store or other data source
 -> relevant context
 -> prompt template
 -> model
 -> final answer
+```
+
+When tools or agents are involved, the model may choose a tool, receive its
+result, and continue the workflow before producing the final answer:
+
+```text
+user input -> model -> tool call -> tool result -> model -> final answer
 ```
 
 This architecture makes each step replaceable. For example, an application can
@@ -192,24 +207,18 @@ and structured output.
 
 ## Alternatives to LangChain
 
-LangChain is one option for building LLM applications. The best choice depends
-on the application's complexity, the team's preferences, and the integrations
-that are required.
+LangChain is one option for building LLM applications. The most commonly
+encountered alternatives include:
 
-- **Model provider SDKs**: OpenAI, Anthropic, Google, and other providers offer
-  their own SDKs. These are often the simplest choice for direct model calls
-  and provider-specific features.
-- **LlamaIndex**: Focuses strongly on connecting LLMs to external data,
-  document indexing, and retrieval-augmented generation workflows.
+- **LlamaIndex**: Focuses on connecting LLMs to external data, document
+  indexing, and retrieval-augmented generation workflows.
 - **Microsoft Semantic Kernel**: Provides orchestration, plugins, memory, and
-  planning features with strong support for Microsoft and enterprise
+  planning features, with strong support for Microsoft and enterprise
   ecosystems.
-- **Haystack**: Offers components and pipelines for search, retrieval,
+- **Haystack**: Provides components and pipelines for search, retrieval,
   question-answering, and production NLP applications.
-- **DSPy**: Focuses on programming and optimizing language model pipelines
-  through declarative modules and evaluation-driven optimization.
-- **Custom application code**: For a small application, direct SDK calls and
-  ordinary Python functions may be clearer than adding a framework.
+- **Model provider SDKs**: Provider-specific SDKs are often the simplest choice
+  for direct model calls and provider-specific features.
 
 LangChain is a good fit when an application needs composable workflows,
 multiple integrations, provider flexibility, or a common interface across
