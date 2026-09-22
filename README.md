@@ -9,7 +9,8 @@ Official LangChain documentation: [Python overview](https://docs.langchain.com/o
 
 | Module | Topic | Status |
 | --- | --- | --- |
-| [01 - Introduction](introduction/README.md) | What LangChain is, the core building blocks, and a first runnable example | In progress |
+| [01 - Introduction](introduction/README.md) | What LangChain is, the core building blocks, and a first runnable example | Completed |
+| [02 - Models](models/README.md) | Embeddings, LLMs, chat models, multimodal models, and model composition | Completed |
 
 More modules will be added here as the learning path grows.
 
