@@ -5,6 +5,7 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings, OpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_protocol import Any
 import asyncio
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 class MonitorHandler(BaseCallbackHandler):
@@ -90,8 +91,27 @@ async def run_chat_batch():
 
 def run_embedding_sync():
     embedding_model = OpenAIEmbeddings(model="text-embedding-3-small")
-    response = embedding_model.embed_query("What does LangChain do?")
-    print(response)
+    documents = [
+        "LangChain helps developers build applications powered by language models.",
+        "Embedding models convert text into vectors for semantic search.",
+        "Python lists preserve insertion order and can contain duplicate values.",
+        "A chat model can answer questions using a sequence of messages.",
+    ]
+    query = "What is langchain?"
+
+    document_vectors = embedding_model.embed_documents(documents)
+    query_vector = embedding_model.embed_query(query)
+
+    ranked_documents = sorted(
+        zip(documents, document_vectors),
+        key=lambda item: cosine_similarity([query_vector], [item[1]])[0][0],
+        reverse=True,
+    )
+
+    print(f"Query: {query}\n")
+    for document, document_vector in ranked_documents:
+        score = cosine_similarity([query_vector], [document_vector])[0][0]
+        print(f"{score:.4f} - {document}")
 
 
 async def run_embedding_async():
@@ -112,4 +132,5 @@ async def run_embedding_async():
 
 # Embeddings models invocation
 # run_embedding_sync()
+# run_embedding_similarity()
 # asyncio.run(run_embedding_async())
