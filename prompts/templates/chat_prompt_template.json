@@ -1,0 +1,47 @@
+{
+  "lc": 1,
+  "type": "constructor",
+  "id": ["langchain", "prompts", "chat", "ChatPromptTemplate"],
+  "kwargs": {
+    "input_variables": ["question", "style"],
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": ["langchain", "prompts", "chat", "SystemMessagePromptTemplate"],
+        "kwargs": {
+          "prompt": {
+            "lc": 1,
+            "type": "constructor",
+            "id": ["langchain", "prompts", "prompt", "PromptTemplate"],
+            "kwargs": {
+              "input_variables": ["style"],
+              "template": "You are a {style} assistant.",
+              "template_format": "f-string"
+            },
+            "name": "PromptTemplate"
+          }
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": ["langchain", "prompts", "chat", "HumanMessagePromptTemplate"],
+        "kwargs": {
+          "prompt": {
+            "lc": 1,
+            "type": "constructor",
+            "id": ["langchain", "prompts", "prompt", "PromptTemplate"],
+            "kwargs": {
+              "input_variables": ["question"],
+              "template": "{question}",
+              "template_format": "f-string"
+            },
+            "name": "PromptTemplate"
+          }
+        }
+      }
+    ]
+  },
+  "name": "ChatPromptTemplate"
+}
