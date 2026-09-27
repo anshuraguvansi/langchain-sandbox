@@ -11,18 +11,23 @@ Official LangChain documentation: [Python overview](https://docs.langchain.com/o
 | --- | --- | --- |
 | [01 - Introduction](introduction/README.md) | What LangChain is, the core building blocks, and a first runnable example | Completed |
 | [02 - Models](models/README.md) | Embeddings, LLMs, chat models, multimodal models, and model composition | Completed |
+| [03 - Prompts](prompts/README.md) | Prompt templates, chat prompts, variables, composition, and few-shot prompting | Completed |
+| [04 - Structured output](structured-output/README.md) | Schemas, provider and tool strategies, validation, data extraction, APIs, and agent results | Completed |
 
 More modules will be added here as the learning path grows.
 
 ## Repository Structure
 
-Each module follows the same shape:
+Each module combines a theory guide with runnable examples:
 
 ```text
 <module>/
-├── README.md       # theory, concepts, and exercises
-└── playground.py   # runnable examples for the module
+├── README.md          # theory, concepts, and exercises
+└── playground.py      # runnable examples for the module
 ```
+
+Some modules organize multiple playgrounds in a subdirectory instead of using
+one file directly.
 
 ## Prerequisites
 
@@ -48,13 +53,15 @@ OPENAI_API_KEY=""
 Replace the empty value with your key. The `.env` file is ignored by Git and
 must never be committed or shared.
 
-Run examples with the environment file loaded:
+Run an example with the environment file loaded:
 
 ```bash
 uv run --env-file .env python introduction/playground.py
 ```
 
-Module-specific setup and commands live in that module's README.
+For example, the prompts playgrounds are in `prompts/playground/`, and the
+structured-output examples are in `structured-output/Playground.py`.
+Module-specific setup and commands live in each module's README.
 
 ## How to Use This Repository
 
