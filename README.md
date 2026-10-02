@@ -3,7 +3,7 @@
 A step-by-step learning workspace for LangChain. Each module combines a short
 theory guide with a small playground that can be run and modified locally.
 
-Official LangChain documentation: [Python overview](https://docs.langchain.com/oss/python/langchain/overview)
+Official LangChain documentation: [LangChain overview](https://docs.langchain.com/oss/python/langchain/overview)
 
 ## Learning Path
 
