@@ -14,6 +14,7 @@ Official LangChain documentation: [LangChain overview](https://docs.langchain.co
 | [03 - Prompts](prompts/README.md) | Prompt templates, chat prompts, variables, composition, and few-shot prompting | Completed |
 | [04 - Structured output](structured-output/README.md) | Schemas, provider and tool strategies, validation, data extraction, APIs, and agent results | Completed |
 | [05 - Output parsers](output-parser/README.md) | Convert model responses into text, JSON, lists, typed values, and custom application formats | Completed |
+| [06 - Chains](chains/README.md) | Compose prompts, models, parsers, branches, parallel steps, and runnable helpers into workflows | Completed |
 
 More modules will be added here as the learning path grows.
 
@@ -62,7 +63,8 @@ uv run --env-file .env python introduction/playground.py
 
 For example, the prompts playgrounds are in `prompts/playground/`, the
 structured-output examples are in `structured-output/playground.py`, and the
-output-parser examples are in `output-parser/playground.py`.
+output-parser examples are in `output-parser/playground.py`. Chain examples
+are in `chains/playground.py`.
 Module-specific setup and commands live in each module's README.
 
 ## How to Use This Repository
