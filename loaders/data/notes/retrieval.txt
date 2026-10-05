@@ -1,0 +1,4 @@
+Retrieval notes
+
+Split loaded documents into useful chunks before creating embeddings.
+Retrieve relevant chunks to provide context for a model's answer.

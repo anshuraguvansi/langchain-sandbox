@@ -1,0 +1,4 @@
+Loading notes
+
+Choose a document loader that matches your source format.
+Keep source metadata so answers can point back to the original document.

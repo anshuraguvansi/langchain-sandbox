@@ -1,0 +1,16 @@
+{
+  "lessons": [
+    {
+      "title": "Loading",
+      "description": "Loaders convert source data into documents."
+    },
+    {
+      "title": "Splitting",
+      "description": "Text splitters divide documents into smaller chunks."
+    },
+    {
+      "title": "Retrieval",
+      "description": "Retrievers find documents relevant to a question."
+    }
+  ]
+}

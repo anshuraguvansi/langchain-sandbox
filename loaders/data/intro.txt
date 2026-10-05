@@ -1,0 +1,5 @@
+LangChain document loaders
+
+A loader reads a source and returns Document objects.
+Each document has page_content for text and metadata for source details.
+These sample files help us explore loading before splitting and embedding.
