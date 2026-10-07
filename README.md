@@ -7,16 +7,16 @@ Official LangChain documentation: [LangChain overview](https://docs.langchain.co
 
 ## Learning Path
 
-| Module | Topic | Status |
-| --- | --- | --- |
-| [01 - Introduction](introduction/README.md) | What LangChain is, the core building blocks, and a first runnable example | Completed |
-| [02 - Models](models/README.md) | Embeddings, LLMs, chat models, multimodal models, and model composition | Completed |
-| [03 - Prompts](prompts/README.md) | Prompt templates, chat prompts, variables, composition, and few-shot prompting | Completed |
-| [04 - Structured output](structured-output/README.md) | Schemas, provider and tool strategies, validation, data extraction, APIs, and agent results | Completed |
-| [05 - Output parsers](output-parser/README.md) | Convert model responses into text, JSON, lists, typed values, and custom application formats | Completed |
-| [06 - Chains](chains/README.md) | Compose prompts, models, parsers, branches, parallel steps, and runnable helpers into workflows | Completed |
-| [07 - Loaders](loaders/README.md) | Load text, PDFs, CSV, JSON, web pages, and directories; inspect metadata, compare PDF parsers, and use lazy loading | Completed |
-| [08 - Splitters](splitters/README.md) | Split by characters, tokens, headings, JSON structure, code boundaries, and sentences; understand chunk size and overlap, and build a custom fixed-width splitter | Completed |
+| Module | Topic |
+| --- | --- |
+| [01 - Introduction](introduction/README.md) | What LangChain is, the core building blocks, and a first runnable example |
+| [02 - Models](models/README.md) | Embeddings, LLMs, chat models, multimodal models, and model composition |
+| [03 - Prompts](prompts/README.md) | Prompt templates, chat prompts, variables, composition, and few-shot prompting |
+| [04 - Structured output](structured-output/README.md) | Schemas, provider and tool strategies, validation, data extraction, APIs, and agent results |
+| [05 - Output parsers](output-parser/README.md) | Convert model responses into text, JSON, lists, typed values, and custom application formats |
+| [06 - Chains](chains/README.md) | Compose prompts, models, parsers, branches, parallel steps, and runnable helpers into workflows |
+| [07 - Loaders](loaders/README.md) | Load text, PDFs, CSV, JSON, web pages, and directories; inspect metadata, compare PDF parsers, and use lazy loading |
+| [08 - Splitters](splitters/README.md) | Split by characters, tokens, headings, JSON structure, code boundaries, and sentences; understand chunk size and overlap, and build a custom fixed-width splitter |
 
 More modules will be added here as the learning path grows.
 
