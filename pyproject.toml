@@ -24,6 +24,14 @@ loaders = [
     "pypdf>=6.19.0",
     "unstructured[csv]>=0.18.32",
 ]
+splitters = [
+    "beautifulsoup4>=4.15.0",
+    "langchain-text-splitters>=1.1.2",
+    "lxml>=6.1.3",
+    "nltk>=3.10.3",
+    "spacy>=3.8.16",
+    "tiktoken>=0.14.0",
+]
 
 [tool.uv]
 package = false

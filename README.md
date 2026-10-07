@@ -16,6 +16,7 @@ Official LangChain documentation: [LangChain overview](https://docs.langchain.co
 | [05 - Output parsers](output-parser/README.md) | Convert model responses into text, JSON, lists, typed values, and custom application formats | Completed |
 | [06 - Chains](chains/README.md) | Compose prompts, models, parsers, branches, parallel steps, and runnable helpers into workflows | Completed |
 | [07 - Loaders](loaders/README.md) | Load text, PDFs, CSV, JSON, web pages, and directories; inspect metadata, compare PDF parsers, and use lazy loading | Completed |
+| [08 - Splitters](splitters/README.md) | Split by characters, tokens, headings, JSON structure, code boundaries, and sentences; understand chunk size and overlap, and build a custom fixed-width splitter | Completed |
 
 More modules will be added here as the learning path grows.
 
@@ -69,6 +70,10 @@ are in `chains/playground.py`.
 Loader examples are in `loaders/playground.py`, with sample files in
 `loaders/data/`. Run them with `uv run --extra loaders python loaders/playground.py`;
 no API key is needed, but the web loader requires internet access.
+Splitter examples are in `splitters/playground.py`. Run them with
+`uv run --extra splitters python splitters/playground.py`; no API key is needed.
+See the [splitters guide](splitters/README.md#run-the-playground) for NLTK setup
+and first-run tokenizer downloads.
 Module-specific setup and commands live in each module's README.
 
 ## How to Use This Repository
